@@ -1,0 +1,287 @@
+/* CustomerAddresses.css */
+.customer-addresses-container {
+  background: #fff;
+  border-radius: 14px;
+  box-shadow: 0 2px 16px rgba(0,0,0,0.07);
+  padding: 24px 20px;
+  margin-bottom: 32px;
+  direction: rtl;
+}
+.customer-addresses-title {
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: #a67c2e;
+  margin-bottom: 18px;
+}
+.customer-addresses-loading {
+  text-align: center;
+  margin: 18px 0;
+}
+.customer-addresses-error {
+  color: #b71c1c;
+  background: #fff0f0;
+  border-radius: 8px;
+  padding: 10px 18px;
+  text-align: center;
+  font-weight: bold;
+  margin-bottom: 12px;
+}
+.customer-addresses-success {
+  color: #388e3c;
+  background: #e0f7e9;
+  border-radius: 8px;
+  padding: 10px 18px;
+  text-align: center;
+  font-weight: bold;
+  margin-bottom: 12px;
+}
+.customer-addresses-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 18px;
+  margin-bottom: 18px;
+}
+.customer-address-card {
+  background: #faf7f2;
+  border: 2px solid #eee;
+  border-radius: 10px;
+  padding: 16px 18px 12px 18px;
+  min-width: 260px;
+  max-width: 320px;
+  flex: 1 1 260px;
+  cursor: pointer;
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  position: relative;
+  transition: border 0.2s, box-shadow 0.2s;
+}
+.customer-address-card.selected {
+  border: 2px solid #a67c2e;
+  box-shadow: 0 2px 12px rgba(166,124,46,0.08);
+  background: #fffbe9;
+}
+.customer-address-info {
+  flex: 1;
+}
+.customer-address-row {
+  font-size: 1rem;
+  margin-bottom: 4px;
+  color: #444;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.customer-address-default {
+  color: #388e3c;
+  font-size: 0.95rem;
+  font-weight: bold;
+  margin-top: 4px;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+.customer-address-edit-btn {
+  background: #fff;
+  border: 1px solid #a67c2e;
+  color: #a67c2e;
+  border-radius: 6px;
+  padding: 4px 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.15s, color 0.15s;
+  margin-right: 6px;
+}
+.customer-address-edit-btn:hover {
+  background: #a67c2e;
+  color: #fff;
+}
+.customer-address-details {
+  margin-top: 18px;
+  background: #f7f7f7;
+  border-radius: 10px;
+  padding: 18px 20px;
+  box-shadow: 0 1px 6px rgba(0,0,0,0.04);
+  max-width: 500px;
+}
+.customer-address-details-box > div {
+  margin-bottom: 7px;
+  font-size: 1.05rem;
+  color: #333;
+}
+.customer-address-add-btn {
+  background: #a67c2e;
+  color: #fff;
+  border: none;
+  border-radius: 7px;
+  padding: 8px 22px;
+  font-size: 1rem;
+  font-weight: bold;
+  margin-bottom: 18px;
+  cursor: pointer;
+  transition: background 0.18s;
+  box-shadow: 0 1px 6px rgba(166,124,46,0.07);
+}
+.customer-address-add-btn:hover {
+  background: #8d6722;
+}
+@media (max-width: 700px) {
+  .customer-addresses-container{
+    padding: 5px 15px;
+  }
+  .customer-addresses-list {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .customer-address-card {
+    min-width: 0;
+    max-width: 100%;
+    width: 100%;
+    box-sizing: border-box;
+    max-height: 135px;
+  }
+  .customer-address-details {
+    max-width: 100%;
+    padding: 12px 8px;
+  }
+}
+
+.customer-address-actions {
+  display: flex;
+  gap: 8px;
+}
+
+.customer-address-delete-btn {
+  background: #fff;
+  border: 1px solid #e53935;
+  color: #e53935;
+  border-radius: 6px;
+  padding: 4px 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.15s, color 0.15s;
+}
+
+.customer-address-delete-btn:hover {
+  background: #e53935;
+  color: #fff;
+}
+
+.delete-confirm-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0,0,0,0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2000;
+  direction: rtl;
+}
+
+.delete-confirm-dialog {
+  background: #fff;
+  border-radius: 12px;
+  padding: 24px;
+  width: 90%;
+  max-width: 400px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.15);
+  text-align: center;
+}
+
+.delete-confirm-dialog h3 {
+  color: #e53935;
+  margin: 0 0 16px 0;
+  font-size: 1.4rem;
+}
+
+.delete-confirm-dialog p {
+  color: #333;
+  margin: 0 0 24px 0;
+  font-size: 1.1rem;
+}
+
+.delete-confirm-actions {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+}
+
+.delete-confirm-cancel {
+  background: #fff;
+  border: 1.5px solid #ccc;
+  color: #666;
+  padding: 8px 24px;
+  border-radius: 20px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.delete-confirm-cancel:hover:not(:disabled) {
+  border-color: #999;
+  color: #333;
+}
+
+.delete-confirm-delete {
+  background: #e53935;
+  border: none;
+  color: #fff;
+  padding: 8px 24px;
+  border-radius: 20px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.2s;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.delete-confirm-delete:hover:not(:disabled) {
+  background: #c62828;
+}
+
+.delete-confirm-cancel:disabled,
+.delete-confirm-delete:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.top-message {
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10000;
+  padding: 12px 32px;
+  border-radius: 8px;
+  font-weight: bold;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+  animation: slideDown 0.3s ease-out;
+  direction: rtl;
+}
+
+.error-message {
+  background: #fff0f0;
+  color: #b71c1c;
+}
+
+.success-message {
+  background: #e0f7e9;
+  color: #388e3c;
+}
+
+@keyframes slideDown {
+  from {
+    transform: translate(-50%, -100%);
+    opacity: 0;
+  }
+  to {
+    transform: translate(-50%, 0);
+    opacity: 1;
+  }
+} 

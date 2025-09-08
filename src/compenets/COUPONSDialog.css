@@ -1,0 +1,149 @@
+.coupons-dialog-overlay {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0,0,0,0.18);
+  z-index: 40000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.coupons-dialog {
+  background: #e3f3ff;
+  border-radius: 28px;
+  box-shadow: 0 8px 32px #0003;
+  padding: 32px 18px 24px 18px;
+  min-width: 340px;
+  max-width: 420px;
+  width: 95vw;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  animation: fadeInDialog 0.22s;
+}
+.coupons-dialog-close {
+  position: absolute;
+  top: 16px;
+  left: 18px;
+  background: none;
+  border: none;
+  font-size: 2em;
+  color: #222;
+  cursor: pointer;
+  transition: color 0.18s;
+  z-index: 2;
+}
+.coupons-dialog-close:hover {
+  color: #b71c1c;
+}
+.coupons-dialog-header {
+  text-align: center;
+  margin-bottom: 18px;
+}
+.coupons-dialog-title-main {
+  display: block;
+  font-size: 1.25em;
+  font-weight: bold;
+  color: #1a2340;
+  margin-bottom: 4px;
+}
+.coupons-dialog-title-sub {
+  display: block;
+  font-size: 1.15em;
+  color: #ffd600;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+.coupons-dialog-list {
+  width: 100%;
+  margin-bottom: 18px;
+}
+.coupons-dialog-row {
+  background: #fff;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 14px;
+  box-shadow: 0 2px 8px #0001;
+  padding: 12px 10px 12px 10px;
+  border: 2px solid #b3e0ff;
+  position: relative;
+}
+.coupons-dialog-row:last-child {
+  margin-bottom: 0;
+}
+.coupons-dialog-code-box {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.coupons-dialog-check {
+  width: 24px;
+  height: 24px;
+  margin-left: 2px;
+}
+.coupons-dialog-code-label {
+  color: #1a2340;
+  font-size: 1em;
+  font-weight: 500;
+}
+.coupons-dialog-code {
+  font-size: 1.15em;
+  font-weight: bold;
+  color: #2196f3;
+  letter-spacing: 1px;
+}
+.coupons-dialog-discount-box {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 2px;
+}
+.coupons-dialog-discount {
+  color: #1976d2;
+  font-size: 1.15em;
+  font-weight: bold;
+}
+.coupons-dialog-minorder {
+  color: #888;
+  font-size: 0.98em;
+}
+.coupons-dialog-cta {
+  background: #0074d9;
+  color: #fff;
+  border: none;
+  border-radius: 18px;
+  padding: 12px 0;
+  width: 80%;
+  font-size: 1.18em;
+  font-weight: bold;
+  margin-top: 10px;
+  cursor: pointer;
+  box-shadow: 0 2px 8px #0002;
+  transition: background 0.18s;
+}
+.coupons-dialog-cta:hover {
+  background: #005fa3;
+}
+@media (max-width: 600px) {
+  .coupons-dialog {
+    min-width: 0;
+    max-width: 98vw;
+    padding: 16px 2px 12px 2px;
+  }
+  .coupons-dialog-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
+    padding: 10px 6px 10px 6px;
+  }
+  .coupons-dialog-cta {
+    width: 95%;
+    font-size: 1em;
+  }
+}
+@keyframes fadeInDialog {
+  from { opacity: 0; transform: scale(0.95); }
+  to { opacity: 1; transform: scale(1); }
+} 

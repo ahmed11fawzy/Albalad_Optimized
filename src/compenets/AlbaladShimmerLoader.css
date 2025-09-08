@@ -1,0 +1,36 @@
+.albalad-shimmer-loader-overlay {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: #fff;
+  z-index: 99999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.albalad-shimmer-text {
+  font-size: 3.5rem;
+  font-weight: bold;
+  color: #b88c36;
+  position: relative;
+  text-align: center;
+  letter-spacing: 0.1em;
+  user-select: none;
+}
+.shimmer {
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+  background: linear-gradient(120deg, #b88c36 30%, #fff 50%, #b88c36 70%);
+  background-size: 200% 100%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shimmer-wave 1.7s infinite linear;
+}
+@keyframes shimmer-wave {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+} 

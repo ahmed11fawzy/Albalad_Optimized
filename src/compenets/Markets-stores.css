@@ -1,0 +1,137 @@
+:root{
+  --primary-color:#b88c36;
+  --second-color:#000000a8;
+  --third-color:white;
+  --transction-time:0.5s ease;
+  --primary-colo-low-opacity:#f0cb836b;
+  --border-color:#0000001c;
+  --transcition:0.5s ease;
+  --star-color:#FFD700;
+  --discount-perecent-bg:#ff0000a6;
+
+}
+.markets-stores-page {
+  /* padding: 24px 12px; */
+  border-radius: 18px;
+  text-align: center;
+  overflow-x: hidden;
+}
+
+.markets-stores-title {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 32px;
+  color: #1a2340;
+}
+
+.markets-stores-slider {
+  position: relative;
+  width: 100%;
+  overflow: visible;
+}
+
+.markets-store-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 12px 0;
+}
+
+.markets-store-img-circle {
+  width: 100px;
+  
+  height: 100px;
+  border-radius: 50%;
+  overflow: hidden;
+  /* border: 3px solid #e0e0e0; */
+  border: 3px solid #da0e0e;
+  box-shadow: 0 2px 8px rgba(26,115,232,0.07);
+  margin-bottom: 14px;
+  background: #f7f7f7;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.markets-store-img-circle img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.markets-store-name {
+  font-size: 1.08rem;
+  font-weight: 600;
+  color: #1a2340;
+  margin-top: 6px;
+  text-align: center;
+  width: 100%;
+  display: block;
+}
+
+.markets-stores-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 38px;
+  height: 38px;
+  background: #fff;
+  border-radius: 50%;
+  box-shadow: 0 2px 8px rgba(26,115,232,0.13);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.7em;
+  color: var(--primary-color);
+  cursor: pointer;
+  z-index: 2;
+  border: 1.5px solid #e0e0e0;
+  transition: background 0.2s, color 0.2s;
+}
+
+.markets-stores-arrow.next {
+  right: 10px;
+  margin-right: 0;
+}
+
+.markets-stores-arrow.prev {
+  left: 10px;
+  margin-left: 0;
+}
+
+.markets-stores-arrow:hover {
+  background: #e3f2fd;
+}
+
+@media (max-width: 900px) {
+  .markets-store-img-circle {
+    width: 100px ;
+    height: 100px;
+  }
+  .markets-stores-title {
+    font-size: 1.3rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .markets-stores-page {
+    padding: 10px 2px;
+  }
+  .markets-store-img-circle {
+    width: 80px;
+    height: 80px;
+  }
+  .markets-stores-arrow{
+    display: none;
+  }
+}
+
+.markets-stores-slider--draggable .slick-list {
+  cursor: grab;
+}
+
+.markets-stores-slider--draggable .slick-list:active {
+  cursor: grabbing;
+} 

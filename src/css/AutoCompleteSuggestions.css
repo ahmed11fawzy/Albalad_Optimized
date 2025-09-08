@@ -1,0 +1,26 @@
+.autocomplete-suggestions-popup {
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px #0001;
+  padding: 6px 0;
+  min-height: 36px;
+  max-height: 220px;
+  overflow-y: auto;
+}
+.autocomplete-suggestion-item {
+  padding: 7px 16px;
+  font-size: 0.97em;
+  color: #222;
+  cursor: pointer;
+  border-radius: 6px;
+  transition: background 0.15s;
+}
+.autocomplete-suggestion-item:hover {
+  background: #f5f5f5;
+}
+.autocomplete-suggestion-empty {
+  color: #aaa;
+  font-size: 0.93em;
+  text-align: center;
+  padding: 10px 0;
+}

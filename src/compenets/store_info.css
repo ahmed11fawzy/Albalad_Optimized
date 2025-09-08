@@ -1,0 +1,140 @@
+/* Store Information Card Styles */
+
+:root{
+    --primary-color:#b88c36;
+    --second-color:#000000a8;
+    --third-color:white;
+    --transction-time:0.5s ease;
+    --primary-colo-low-opacity:#f0cb836b;
+    --border-color:#0000001c;
+    --transcition:0.5s ease;
+    --star-color:#FFD700;
+    --discount-perecent-bg:#ff0000a6;
+}
+.sold-by-box{
+    position: relative;
+    display: flex;
+    cursor: pointer;
+    align-items: center;
+    justify-content: space-between;
+}
+.sold-by-box p{
+    width: 100%;
+}
+.seller-card {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background: white;
+    border: 1px solid #ccc;
+    padding: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    border-radius: 4px;
+    transition: box-shadow 0.3s ease;
+    width: 100%;
+}
+
+.seller-card:hover {
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.seller-card p {
+    margin: 8px 0;
+    font-size: 0.9rem;
+}
+
+.seller-card .store-details {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 12px;
+}
+
+.seller-card .ratings {
+    color: #e74c3c;
+    font-weight: bold;
+}
+
+.seller-card .ratings p {
+    margin: 4px 0;
+}
+.store-details-btn-link{
+    text-decoration: none;
+    color:black;
+}
+.store-details-btn {
+    background: linear-gradient(90deg, #c89836 0%, #f3e2b7 100%);
+    border: none;
+    border-radius: 8px;
+    padding: 8px 22px;
+    font-weight: bold;
+    font-size: 1em;
+    cursor: pointer;
+    transition: box-shadow 0.2s;
+    box-shadow: 0 2px 8px rgba(200,152,54,0.08);
+    margin-top: 10px;
+}
+
+.store-details-btn:hover {
+    box-shadow: 0 4px 16px rgba(200,152,54,0.18);
+    opacity: 0.95;
+}
+
+.arrow-icon {
+    margin-left: 8px;
+    color: var(--primary-color);
+    transition: transform 0.3s ease;
+}
+
+.sold-by-box:hover .arrow-icon {
+    transform: translateX(4px);
+}
+
+.seller-actions-row {
+  display: flex;
+  width: 100%;
+  margin-top: 12px;
+  gap: 10px;
+}
+
+.seller-action-btn {
+  flex: 1 1 0;
+  width: 50%;
+  padding: 12px 0;
+  border: none;
+  background: #f7f7f7;
+  font-size: 1.1em;
+  font-weight: bold;
+  border-radius: 0;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.seller-action-btn:first-child {
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  border-left: 1px solid #eee;
+}
+
+.seller-action-btn:last-child {
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+.seller-action-btn:hover {
+  background: #fff3e0;
+  color: #a67c1a;
+}
+
+.seller-btn-icon {
+  font-size: 1.1em;
+  margin-right: 4px;
+}
+
+.heart-icon {
+  color: #e53935;
+} 

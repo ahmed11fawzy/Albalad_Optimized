@@ -1,0 +1,1065 @@
+/* Compact Super Offers Section */
+.super-offers-section-compact {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    padding: 20px 15px;
+    margin: 0px 0;
+    border-radius: 15px;
+    position: relative;
+    overflow: hidden;
+    max-width: 100%;
+    box-sizing: border-box;
+    width: 100%;
+    min-height: 400px;
+    /* Fix: Match BrandAdsComponent height */
+    contain: layout style;
+    /* Fix: Prevent layout overflow */
+}
+
+/* Half-width layout styles for side-by-side positioning */
+.row .col-md-6 .super-offers-section-compact {
+    min-height: 400px;
+    /* Match FashionSlider height */
+    height: 400px;
+    /* Fixed height for consistent layout */
+    padding: 15px 12px;
+    /* Reduced padding for smaller container */
+}
+
+/* Fix: Ensure component doesn't overflow parent container */
+.container .super-offers-section-compact {
+    margin-left: 0;
+    margin-right: 0;
+    width: calc(100% - 0px);
+    /* Fix: Account for any parent padding */
+}
+
+.super-offers-section-compact::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, transparent 70%);
+    animation: rotateGradient 20s linear infinite;
+}
+
+@keyframes rotateGradient {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* Compact Section Header - Adjusted for half-width */
+.section-header-compact {
+    text-align: center;
+    margin-bottom: 10px;
+    /* Reduced margin for smaller container */
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.title-section-compact {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.super-icon-wrapper-compact {
+    background: linear-gradient(45deg, #ff6b6b, #feca57);
+    padding: 8px;
+    border-radius: 50%;
+    box-shadow: 0 5px 15px rgba(255, 107, 107, 0.3);
+    animation: pulse 2s infinite;
+    flex-shrink: 0;
+}
+
+.super-icon-wrapper-compact svg {
+    font-size: 1.2rem;
+    color: white;
+}
+
+@keyframes pulse {
+
+    0%,
+    100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.1);
+    }
+}
+
+.section-title-compact {
+    font-size: 1.3rem;
+    /* Reduced font size for half-width */
+    font-weight: bold;
+    color: white;
+    margin: 0;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    white-space: nowrap;
+}
+
+/* Half-width layout title adjustment */
+.row .col-md-6 .section-title-compact {
+    font-size: 1.2rem;
+    /* Smaller title for half-width */
+}
+
+/* Compact Loading States */
+.loading-container-compact {
+    text-align: center;
+    padding: 30px 15px;
+    color: white;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.loading-spinner-compact {
+    width: 30px;
+    height: 30px;
+    border: 3px solid rgba(255, 255, 255, 0.3);
+    border-top: 3px solid white;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    margin: 0 auto 10px;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.no-offers-compact {
+    text-align: center;
+    padding: 30px 15px;
+    color: white;
+    font-size: 1rem;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* Compact Swiper Container - Adjusted for half-width */
+.offers-slider-container-compact {
+    position: relative;
+    z-index: 2;
+    margin: 10px 0;
+    /* Reduced margin */
+    width: 100%;
+    box-sizing: border-box;
+    overflow: hidden;
+    min-height: 260px;
+    /* Adjusted for half-width */
+    contain: layout;
+    /* Fix: Contain layout effects */
+}
+
+/* Half-width layout slider adjustments */
+.row .col-md-6 .offers-slider-container-compact {
+    min-height: 250px;
+    /* Smaller height for half-width */
+    margin: 8px 0;
+    /* Reduced margin */
+}
+
+/* Fix: Ensure proper swiper initialization and prevent width issues */
+.super-offers-swiper-compact {
+    padding: 8px 0 30px 0;
+    /* Reduced padding for half-width */
+    width: 100%;
+    box-sizing: border-box;
+    overflow: visible;
+    /* Fix: Allow proper slide visibility */
+    min-height: 260px;
+    /* Adjusted for half-width */
+}
+
+/* Half-width layout swiper adjustments */
+.row .col-md-6 .super-offers-swiper-compact {
+    min-height: 250px;
+    /* Smaller height for half-width */
+    padding: 6px 0 25px 0;
+    /* Reduced padding */
+}
+
+.super-offers-swiper-compact .swiper-wrapper {
+    box-sizing: border-box;
+    display: flex;
+    align-items: stretch;
+    /* Fix: Ensure consistent height */
+    transform: translate3d(0px, 0, 0) !important;
+    /* Fix: Prevent transform issues */
+}
+
+.super-offers-swiper-compact .swiper-slide {
+    box-sizing: border-box;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    /* Fix: Consistent height */
+    min-height: 250px;
+    /* Adjusted for half-width */
+    /* Fix: Prevent slide collapse */
+    flex-shrink: 0;
+    /* Fix: Prevent slide shrinking */
+    opacity: 1 !important;
+    /* Fix: Prevent slide fade issues */
+    transform: translateX(0) !important;
+    /* Fix: Ensure slides stay in place */
+}
+
+/* Half-width layout slide adjustments */
+.row .col-md-6 .super-offers-swiper-compact .swiper-slide {
+    min-height: 240px;
+    /* Smaller height for half-width */
+}
+
+/* Fix: Ensure active slide is always visible */
+.super-offers-swiper-compact .swiper-slide-active {
+    opacity: 1 !important;
+    visibility: visible !important;
+    transform: translateX(0) !important;
+}
+
+/* Fix: Ensure slides during transition remain visible */
+.super-offers-swiper-compact .swiper-slide-next,
+.super-offers-swiper-compact .swiper-slide-prev {
+    opacity: 1 !important;
+    visibility: visible !important;
+}
+
+.super-offers-swiper-compact .swiper-pagination {
+    bottom: 10px;
+}
+
+.super-offers-swiper-compact .swiper-pagination-bullet {
+    background: rgba(255, 255, 255, 0.5);
+    width: 8px;
+    height: 8px;
+    opacity: 0.7;
+}
+
+.super-offers-swiper-compact .swiper-pagination-bullet-active {
+    background: white;
+    opacity: 1;
+    transform: scale(1.2);
+}
+
+/* Custom Navigation Buttons - Adjusted for half-width */
+.swiper-button-prev-custom,
+.swiper-button-next-custom {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 30px;
+    /* Reduced size for half-width */
+    height: 30px;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 10;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    pointer-events: auto;
+    /* Fix: Ensure buttons are clickable */
+}
+
+/* Half-width layout navigation adjustments */
+.row .col-md-6 .swiper-button-prev-custom,
+.row .col-md-6 .swiper-button-next-custom {
+    width: 28px;
+    /* Smaller size for half-width */
+    height: 28px;
+}
+
+.swiper-button-prev-custom {
+    left: 10px;
+}
+
+.swiper-button-next-custom {
+    right: 10px;
+}
+
+.swiper-button-prev-custom:hover,
+.swiper-button-next-custom:hover {
+    background: white;
+    transform: translateY(-50%) scale(1.1);
+}
+
+.swiper-button-prev-custom svg,
+.swiper-button-next-custom svg {
+    font-size: 0.85rem;
+    /* Reduced icon size */
+    color: #667eea;
+}
+
+/* Half-width layout navigation icon adjustments */
+.row .col-md-6 .swiper-button-prev-custom svg,
+.row .col-md-6 .swiper-button-next-custom svg {
+    font-size: 0.75rem;
+    /* Smaller icon for half-width */
+}
+
+/* Fix: Ensure proper swiper initialization */
+.super-offers-swiper-compact.swiper-initialized {
+    overflow: visible;
+}
+
+.super-offers-swiper-compact .swiper-slide.swiper-slide-active {
+    opacity: 1;
+    transform: none;
+}
+
+/* Fix: Prevent swiper from affecting parent container width */
+.super-offers-swiper-compact,
+.super-offers-swiper-compact .swiper-wrapper,
+.super-offers-swiper-compact .swiper-slide {
+    will-change: auto !important;
+}
+
+/* Compact Super Offer Card - Adjusted for half-width layout */
+.super-offer-card-compact {
+    background: white;
+    border-radius: 15px;
+    padding: 12px;
+    /* Reduced padding for smaller container */
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    height: 250px;
+    /* Reduced height for half-width layout */
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    /* Fix: Center the card */
+    width: 100%;
+    max-width: 280px;
+    /* Adjusted for smaller container */
+    min-width: 240px;
+    /* Adjusted minimum width */
+    box-sizing: border-box;
+    flex-shrink: 0;
+    /* Fix: Prevent card shrinking */
+}
+
+/* Half-width layout card adjustments */
+.row .col-md-6 .super-offer-card-compact {
+    height: 240px;
+    /* Smaller height for half-width */
+    max-width: 260px;
+    /* Adjusted max width */
+    min-width: 220px;
+    /* Adjusted min width */
+    padding: 10px;
+    /* Reduced padding */
+}
+
+.super-offer-card-compact:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+}
+
+.super-offer-card-compact::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, #ff6b6b, #feca57, #48cae4);
+}
+
+/* Compact Discount Badge */
+.discount-badge-compact {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: linear-gradient(45deg, #e74c3c, #f39c12);
+    color: white;
+    padding: 4px 8px;
+    border-radius: 12px;
+    font-weight: bold;
+    font-size: 0.7rem;
+    box-shadow: 0 3px 10px rgba(231, 76, 60, 0.3);
+    z-index: 3;
+    display: flex;
+    align-items: center;
+    gap: 3px;
+    white-space: nowrap;
+}
+
+.discount-badge-compact svg {
+    font-size: 0.6rem;
+}
+
+/* Compact Card Header */
+.card-header-compact {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 12px;
+    padding-top: 5px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.offer-title-compact {
+    flex: 1;
+    min-width: 0;
+}
+
+.offer-title-compact h3 {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #2c3e50;
+    margin: 0 0 5px 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.store-info-compact {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    color: #7f8c8d;
+    font-size: 0.7rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.store-info-compact svg {
+    color: #3498db;
+    font-size: 0.7rem;
+    flex-shrink: 0;
+}
+
+.offer-type-compact {
+    background: linear-gradient(45deg, #667eea, #764ba2);
+    color: white;
+    padding: 4px 8px;
+    border-radius: 10px;
+    font-size: 0.7rem;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 3px;
+    white-space: nowrap;
+    flex-shrink: 0;
+}
+
+.offer-type-compact svg {
+    font-size: 0.7rem;
+}
+
+/* Compact Product Showcase - Adjusted for half-width */
+.product-showcase-compact {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    /* Reduced margin */
+    padding: 8px;
+    /* Reduced padding */
+    background: #f8f9fa;
+    border-radius: 10px;
+    min-height: 60px;
+    /* Reduced height */
+    width: 100%;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+/* Half-width layout product showcase adjustments */
+.row .col-md-6 .product-showcase-compact {
+    min-height: 55px;
+    /* Smaller height for half-width */
+    padding: 6px;
+    /* Reduced padding */
+    margin-bottom: 8px;
+    /* Reduced margin */
+}
+
+.main-product-compact {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex: 1;
+    min-width: 0;
+}
+
+.product-image-compact {
+    width: 45px;
+    /* Reduced image size for half-width */
+    height: 45px;
+    border-radius: 8px;
+    object-fit: cover;
+    border: 2px solid #ecf0f1;
+    flex-shrink: 0;
+}
+
+/* Half-width layout image adjustments */
+.row .col-md-6 .product-image-compact {
+    width: 40px;
+    /* Smaller image for half-width */
+    height: 40px;
+}
+
+.product-info-compact {
+    flex: 1;
+    min-width: 0;
+}
+
+.product-info-compact h4 {
+    font-size: 0.75rem;
+    /* Reduced font size */
+    color: #2c3e50;
+    margin: 0 0 4px 0;
+    font-weight: 600;
+    line-height: 1.2;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+/* Half-width layout product info adjustments */
+.row .col-md-6 .product-info-compact h4 {
+    font-size: 0.7rem;
+    /* Smaller font for half-width */
+}
+
+.price-info-compact {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    flex-wrap: wrap;
+}
+
+.current-price-compact {
+    font-size: 0.9rem;
+    font-weight: bold;
+    color: #27ae60;
+    white-space: nowrap;
+}
+
+.old-price-compact {
+    font-size: 0.7rem;
+    color: #95a5a6;
+    text-decoration: line-through;
+    white-space: nowrap;
+}
+
+.bonus-indicator {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    background: #e74c3c;
+    color: white;
+    padding: 4px 8px;
+    border-radius: 8px;
+    font-size: 0.7rem;
+    font-weight: bold;
+    white-space: nowrap;
+    flex-shrink: 0;
+}
+
+.bonus-indicator svg {
+    font-size: 0.7rem;
+}
+
+/* Compact Timer Section - Adjusted for half-width */
+.timer-section-compact {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    padding: 6px;
+    /* Reduced padding */
+    border-radius: 10px;
+    margin-bottom: 8px;
+    /* Reduced margin */
+    text-align: center;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* Half-width layout timer adjustments */
+.row .col-md-6 .timer-section-compact {
+    padding: 5px;
+    /* Smaller padding for half-width */
+    margin-bottom: 6px;
+    /* Reduced margin */
+}
+
+.timer-header-compact {
+    color: white;
+    font-size: 0.7rem;
+    margin-bottom: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    white-space: nowrap;
+}
+
+.timer-header-compact svg {
+    font-size: 0.7rem;
+}
+
+.countdown-timer-compact {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    color: white;
+    flex-wrap: wrap;
+}
+
+.timer-unit-compact {
+    display: flex;
+    align-items: center;
+    gap: 2px;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 2px 5px;
+    /* Reduced padding */
+    border-radius: 5px;
+    min-width: 30px;
+    /* Reduced width */
+    justify-content: center;
+    box-sizing: border-box;
+}
+
+/* Half-width layout timer unit adjustments */
+.row .col-md-6 .timer-unit-compact {
+    min-width: 28px;
+    /* Smaller width for half-width */
+    padding: 2px 4px;
+    /* Reduced padding */
+}
+
+.timer-number-compact {
+    font-size: 0.8rem;
+    /* Reduced font size */
+    font-weight: bold;
+    line-height: 1;
+}
+
+/* Half-width layout timer number adjustments */
+.row .col-md-6 .timer-number-compact {
+    font-size: 0.75rem;
+    /* Smaller font for half-width */
+}
+
+.timer-label-compact {
+    font-size: 0.6rem;
+    opacity: 0.8;
+}
+
+.timer-separator-compact {
+    font-size: 1rem;
+    font-weight: bold;
+    opacity: 0.6;
+    animation: blink 1s infinite;
+}
+
+@keyframes blink {
+
+    0%,
+    50% {
+        opacity: 0.6;
+    }
+
+    51%,
+    100% {
+        opacity: 0.2;
+    }
+}
+
+/* Compact Card Footer */
+.card-footer-compact {
+    margin-top: auto;
+    padding-top: 10px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.offer-button-compact {
+    width: 100%;
+    background: linear-gradient(45deg, #667eea, #764ba2);
+    border: none;
+    color: white;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-weight: bold;
+    font-size: 0.8rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 3px 10px rgba(102, 126, 234, 0.3);
+    box-sizing: border-box;
+}
+
+.offer-button-compact:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+}
+
+/* Compact Section Footer */
+.section-footer-compact {
+    text-align: center;
+    position: relative;
+    z-index: 2;
+    margin-top: 10px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.view-all-button-compact {
+    background: white;
+    color: #667eea;
+    border: 2px solid white;
+    padding: 8px 20px;
+    border-radius: 20px;
+    font-weight: bold;
+    font-size: 0.8rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(255, 255, 255, 0.2);
+    box-sizing: border-box;
+}
+
+.view-all-button-compact:hover {
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(255, 255, 255, 0.3);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+
+    /* Stack vertically on mobile */
+    .row {
+        flex-direction: column !important;
+        gap: 15px !important;
+    }
+
+    .col-md-6 {
+        flex: none !important;
+        width: 100% !important;
+    }
+
+    .super-offers-section-compact {
+        padding: 15px 10px;
+        margin: 15px 0;
+        min-height: 380px;
+        /* Fix: Maintain height on mobile */
+        height: auto;
+        /* Allow flexible height on mobile */
+    }
+
+    /* Reset half-width adjustments on mobile */
+    .row .col-md-6 .super-offers-section-compact {
+        min-height: 380px;
+        height: auto;
+        padding: 15px 10px;
+    }
+
+    /* Fix: Adjust for mobile container padding */
+    .container .super-offers-section-compact {
+        width: calc(100% - 0px);
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .section-title-compact {
+        font-size: 1.3rem;
+    }
+
+    /* Reset half-width title adjustments on mobile */
+    .row .col-md-6 .section-title-compact {
+        font-size: 1.3rem;
+    }
+
+    .super-offer-card-compact {
+        height: 260px;
+        padding: 12px;
+        max-width: 280px;
+        min-width: 260px;
+        /* Fix: Maintain minimum width */
+    }
+
+    /* Reset half-width card adjustments on mobile */
+    .row .col-md-6 .super-offer-card-compact {
+        height: 260px;
+        max-width: 280px;
+        min-width: 260px;
+        padding: 12px;
+    }
+
+    .offers-slider-container-compact {
+        min-height: 280px;
+        /* Fix: Adjust for mobile */
+    }
+
+    /* Reset half-width slider adjustments on mobile */
+    .row .col-md-6 .offers-slider-container-compact {
+        min-height: 280px;
+        margin: 15px 0;
+    }
+
+    .super-offers-swiper-compact {
+        min-height: 280px;
+        /* Fix: Adjust for mobile */
+        padding: 10px 0 40px 0;
+    }
+
+    /* Reset half-width swiper adjustments on mobile */
+    .row .col-md-6 .super-offers-swiper-compact {
+        min-height: 280px;
+        padding: 10px 0 40px 0;
+    }
+
+    .super-offers-swiper-compact .swiper-slide {
+        min-height: 260px;
+        /* Fix: Adjust for mobile */
+    }
+
+    /* Reset half-width slide adjustments on mobile */
+    .row .col-md-6 .super-offers-swiper-compact .swiper-slide {
+        min-height: 260px;
+    }
+
+    .card-header-compact {
+        flex-direction: column;
+        gap: 8px;
+        align-items: flex-start;
+    }
+
+    .product-showcase-compact {
+        flex-direction: column;
+        gap: 8px;
+        text-align: center;
+        min-height: 70px;
+        padding: 10px;
+        margin-bottom: 12px;
+    }
+
+    /* Reset half-width product showcase adjustments on mobile */
+    .row .col-md-6 .product-showcase-compact {
+        min-height: 70px;
+        padding: 10px;
+        margin-bottom: 12px;
+    }
+
+    .main-product-compact {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .product-image-compact {
+        width: 50px;
+        height: 50px;
+    }
+
+    /* Reset half-width image adjustments on mobile */
+    .row .col-md-6 .product-image-compact {
+        width: 50px;
+        height: 50px;
+    }
+
+    .product-info-compact h4 {
+        font-size: 0.8rem;
+    }
+
+    /* Reset half-width product info adjustments on mobile */
+    .row .col-md-6 .product-info-compact h4 {
+        font-size: 0.8rem;
+    }
+
+    .countdown-timer-compact {
+        flex-wrap: wrap;
+        gap: 3px;
+    }
+
+    .timer-unit-compact {
+        min-width: 30px;
+        padding: 2px 5px;
+    }
+
+    /* Reset half-width timer adjustments on mobile */
+    .row .col-md-6 .timer-unit-compact {
+        min-width: 30px;
+        padding: 2px 5px;
+    }
+
+    .timer-number-compact {
+        font-size: 0.8rem;
+    }
+
+    /* Reset half-width timer number adjustments on mobile */
+    .row .col-md-6 .timer-number-compact {
+        font-size: 0.8rem;
+    }
+
+    .timer-section-compact {
+        padding: 8px;
+        margin-bottom: 10px;
+    }
+
+    /* Reset half-width timer section adjustments on mobile */
+    .row .col-md-6 .timer-section-compact {
+        padding: 8px;
+        margin-bottom: 10px;
+    }
+
+    .swiper-button-prev-custom,
+    .swiper-button-next-custom {
+        width: 30px;
+        height: 30px;
+    }
+
+    /* Reset half-width navigation adjustments on mobile */
+    .row .col-md-6 .swiper-button-prev-custom,
+    .row .col-md-6 .swiper-button-next-custom {
+        width: 30px;
+        height: 30px;
+    }
+
+    .swiper-button-prev-custom svg,
+    .swiper-button-next-custom svg {
+        font-size: 1rem;
+    }
+
+    /* Reset half-width navigation icon adjustments on mobile */
+    .row .col-md-6 .swiper-button-prev-custom svg,
+    .row .col-md-6 .swiper-button-next-custom svg {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .super-offers-section-compact {
+        padding: 12px 8px;
+        min-height: 360px;
+        /* Fix: Maintain height on small screens */
+    }
+
+    /* Reset half-width adjustments on small screens */
+    .row .col-md-6 .super-offers-section-compact {
+        min-height: 360px;
+        padding: 12px 8px;
+    }
+
+    /* Fix: Adjust for small screen container padding */
+    .container .super-offers-section-compact {
+        width: calc(100% - 0px);
+    }
+
+    .section-title-compact {
+        font-size: 1.2rem;
+    }
+
+    /* Reset half-width title adjustments on small screens */
+    .row .col-md-6 .section-title-compact {
+        font-size: 1.2rem;
+    }
+
+    .super-offer-card-compact {
+        padding: 10px;
+        height: 240px;
+        max-width: 260px;
+        min-width: 240px;
+        /* Fix: Maintain minimum width */
+    }
+
+    /* Reset half-width card adjustments on small screens */
+    .row .col-md-6 .super-offer-card-compact {
+        height: 240px;
+        max-width: 260px;
+        min-width: 240px;
+        padding: 10px;
+    }
+
+    .offers-slider-container-compact {
+        min-height: 260px;
+        /* Fix: Adjust for small screens */
+    }
+
+    /* Reset half-width slider adjustments on small screens */
+    .row .col-md-6 .offers-slider-container-compact {
+        min-height: 260px;
+    }
+
+    .super-offers-swiper-compact {
+        min-height: 260px;
+        /* Fix: Adjust for small screens */
+    }
+
+    /* Reset half-width swiper adjustments on small screens */
+    .row .col-md-6 .super-offers-swiper-compact {
+        min-height: 260px;
+    }
+
+    .super-offers-swiper-compact .swiper-slide {
+        min-height: 240px;
+        /* Fix: Adjust for small screens */
+    }
+
+    /* Reset half-width slide adjustments on small screens */
+    .row .col-md-6 .super-offers-swiper-compact .swiper-slide {
+        min-height: 240px;
+    }
+
+    .product-image-compact {
+        width: 40px;
+        height: 40px;
+    }
+
+    /* Reset half-width image adjustments on small screens */
+    .row .col-md-6 .product-image-compact {
+        width: 40px;
+        height: 40px;
+    }
+
+    .swiper-button-prev-custom,
+    .swiper-button-next-custom {
+        width: 30px;
+        height: 30px;
+    }
+
+    /* Reset half-width navigation adjustments on small screens */
+    .row .col-md-6 .swiper-button-prev-custom,
+    .row .col-md-6 .swiper-button-next-custom {
+        width: 30px;
+        height: 30px;
+    }
+
+    .swiper-button-prev-custom svg,
+    .swiper-button-next-custom svg {
+        font-size: 0.8rem;
+    }
+
+    /* Reset half-width navigation icon adjustments on small screens */
+    .row .col-md-6 .swiper-button-prev-custom svg,
+    .row .col-md-6 .swiper-button-next-custom svg {
+        font-size: 0.8rem;
+    }
+}

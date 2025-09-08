@@ -1,0 +1,178 @@
+.wallet-topup-overlay {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(30, 41, 59, 0.25);
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: fadeIn 0.3s;
+}
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+.wallet-topup-dialog {
+  background: #fff;
+  border-radius: 1.5rem;
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.13);
+  padding: 2.5rem 2rem 2rem 2rem;
+  min-width: 320px;
+  max-width: 95vw;
+  position: relative;
+  direction: rtl;
+  animation: slideDown 0.4s;
+}
+@keyframes slideDown {
+  from { transform: translateY(-40px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+.wallet-topup-close {
+  position: absolute;
+  top: 1.2rem;
+  left: 1.2rem;
+  background: none;
+  border: none;
+  font-size: 2rem;
+  color: #888;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+.wallet-topup-close:hover {
+  color: #e11d48;
+}
+.wallet-topup-title {
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: #2563eb;
+  margin-bottom: 1.5rem;
+  text-align: right;
+}
+.wallet-topup-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.1rem;
+}
+.wallet-topup-label {
+  font-size: 1rem;
+  color: #185a9d;
+  margin-bottom: 0.2rem;
+  font-weight: 500;
+}
+.wallet-topup-input {
+  border: 1.5px solid #d1d5db;
+  border-radius: 10px;
+  padding: 0.7rem 1rem;
+  font-size: 1.1rem;
+  outline: none;
+  transition: border 0.2s;
+  margin-bottom: 0.5rem;
+  text-align: right;
+}
+.wallet-topup-input:focus {
+  border-color: #2563eb;
+}
+.wallet-topup-methods {
+  display: flex;
+  gap: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+.wallet-topup-methods label {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  font-size: 1.05rem;
+  color: #222;
+  cursor: pointer;
+  font-weight: 500;
+}
+.wallet-topup-methods input[type="radio"] {
+  accent-color: #2563eb;
+  width: 1.1em;
+  height: 1.1em;
+}
+.wallet-topup-error {
+  color: #e11d48;
+  background: #fff0f3;
+  border-radius: 8px;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  text-align: right;
+  margin-bottom: 0.5rem;
+}
+.wallet-topup-submit {
+  background: linear-gradient(90deg, #43cea2 0%, #2563eb 100%);
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  padding: 0.8rem 0;
+  font-size: 1.1rem;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 0.7rem;
+  transition: background 0.2s;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+}
+.wallet-topup-submit:hover {
+  background: linear-gradient(90deg, #2563eb 0%, #43cea2 100%);
+}
+.wallet-topup-card-dropdown {
+  margin-bottom: 0.7rem;
+}
+.wallet-topup-card-dropdown select.wallet-topup-input {
+  width: 100%;
+  margin-bottom: 0.5rem;
+  background: #f3f4f6;
+  color: #222;
+  font-weight: 500;
+}
+.wallet-topup-card-options {
+  display: flex;
+  gap: 1rem;
+  margin-top: 0.5rem;
+  flex-wrap: wrap;
+}
+.wallet-topup-card-option {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: #f3f4f6;
+  border-radius: 10px;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  border: 2px solid transparent;
+  transition: border 0.2s, background 0.2s;
+}
+.wallet-topup-card-option.selected, .wallet-topup-card-option:hover {
+  border: 2px solid #2563eb;
+  background: #e0e7ff;
+}
+.wallet-topup-card-img {
+  width: 32px;
+  height: 32px;
+  object-fit: contain;
+  border-radius: 6px;
+  background: #fff;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.07);
+}
+.wallet-topup-spinner {
+  display: inline-block;
+  width: 22px;
+  height: 22px;
+  border: 3px solid #43cea2;
+  border-top: 3px solid #2563eb;
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+  vertical-align: middle;
+  margin: 0 auto;
+}
+.wallet-topup-loading-overlay {
+  position: absolute;
+  top: 50; left: 50;
+  background: rgba(236, 183, 6, 0.65);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  border-radius: 1.5rem;
+} 

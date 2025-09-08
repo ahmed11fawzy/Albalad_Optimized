@@ -1,0 +1,105 @@
+.contact-form-container {
+  max-width: 700px;
+  margin: 40px auto;
+  padding: 30px;
+  background-color: #f9fafb;
+  border-radius: 12px;
+  font-family: 'Segoe UI', sans-serif;
+  direction: rtl;
+  position: relative;
+}
+
+.contact-form-title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 25px;
+  color: #111827;
+}
+
+.contact-form-row {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+.contact-form-group {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-form-label {
+  margin-bottom: 6px;
+  font-weight: 500;
+  color: #374151;
+}
+
+.contact-form-input {
+  padding: 10px 14px;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  background-color: white;
+  font-size: 15px;
+}
+
+.contact-form-submit {
+  margin-top: 25px;
+  background-color: var(--primary-color);
+  color: #fff;
+  padding: 12px 30px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background-color 0.2s ease;
+  min-width: 120px;
+  min-height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.contact-form-error {
+  color: #e11d48;
+  font-size: 13px;
+  margin-top: 4px;
+  font-weight: bold;
+  align-self: flex-start;
+}
+
+.contact-form-success {
+  position: absolute;
+  top: -32px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #d4edda;
+  color: #155724;
+  padding: 18px 28px;
+  border-radius: 12px;
+  font-weight: bold;
+  font-size: 1.15rem;
+  z-index: 10;
+  box-shadow: 0 4px 32px rgba(0,0,0,0.13);
+  text-align: center;
+  min-width: 320px;
+  max-width: 90vw;
+  border: 2px solid #c3e6cb;
+  transition: opacity 0.3s;
+}
+
+.contact-form-spinner {
+  width: 24px;
+  height: 24px;
+  border: 3px solid #fff;
+  border-top: 3px solid #16a34a;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  display: inline-block;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}

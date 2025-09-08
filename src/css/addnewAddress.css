@@ -1,0 +1,167 @@
+.addaddress-dialog-overlay {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0,0,0,0.25);
+  z-index: 2000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: fadeInDialog 0.2s;
+}
+@keyframes fadeInDialog {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+.addaddress-dialog-box {
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 8px 32px #0002;
+  max-width: 700px;
+  width: 95vw;
+  padding: 36px 32px 24px 32px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  direction: rtl;
+  animation: popInDialog 0.2s;
+}
+@keyframes popInDialog {
+  from { transform: scale(0.95); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+.addaddress-dialog-close {
+  position: absolute;
+  top: 18px;
+  left: 18px;
+  background: #f5f5f5;
+  border: none;
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  color: #888;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+  z-index: 2;
+}
+.addaddress-dialog-close:hover {
+  background: #ffe0b2;
+  color: #e53935;
+}
+.addaddress-dialog-title {
+  text-align: center;
+  font-size: 1.35rem;
+  font-weight: bold;
+  color: #e53935;
+  margin-bottom: 8px;
+}
+.addaddress-dialog-section {
+  margin-bottom: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+.addaddress-row {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  align-items: flex-start;
+}
+.addaddress-dialog-section label {
+  font-weight: bold;
+  color: #222;
+  margin-bottom: 2px;
+}
+.addaddress-dialog-section input,
+.addaddress-dialog-section select {
+  border: 1px solid #eee;
+  border-radius: 7px;
+  padding: 8px 12px;
+  font-size: 1rem;
+  outline: none;
+  min-width: 120px;
+  margin-bottom: 2px;
+  background: #fafbfc;
+  transition: border 0.2s;
+}
+.addaddress-dialog-section input:focus,
+.addaddress-dialog-section select:focus {
+  border: 1.5px solid #e53935;
+}
+.addaddress-dialog-section input.error,
+.addaddress-dialog-section select.error {
+  border: 1.5px solid #e53935;
+  background: #fff0f0;
+}
+.addaddress-error {
+  color: #e53935;
+  font-size: 0.95rem;
+  margin-right: 4px;
+  margin-bottom: 2px;
+  display: block;
+}
+.addaddress-phone-group {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+}
+.addaddress-phone-code {
+  background: #f5f5f5;
+  border-radius: 6px;
+  padding: 7px 10px;
+  font-size: 1rem;
+  color: #888;
+  margin-left: 2px;
+}
+.addaddress-checkbox-row {
+  margin-top: 8px;
+  font-size: 1.05rem;
+  color: #333;
+}
+.addaddress-dialog-actions {
+  display: flex;
+  justify-content: center;
+  gap: 18px;
+  margin-top: 18px;
+}
+.addaddress-cancel-btn {
+  background: #fff;
+  color: #222;
+  border: 1.5px solid #ccc;
+  border-radius: 24px;
+  padding: 10px 38px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s, border 0.2s;
+}
+.addaddress-cancel-btn:hover {
+  background: #eee;
+  color: #e53935;
+  border: 1.5px solid #e53935;
+}
+.addaddress-confirm-btn {
+  background: #e53935;
+  color: #fff;
+  border: none;
+  border-radius: 24px;
+  padding: 10px 38px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.addaddress-confirm-btn:hover {
+  background: #b71c1c;
+}
+@media (max-width: 700px) {
+  .addaddress-dialog-box {
+    padding: 16px 4px 12px 4px;
+    border-radius: 8px;
+    max-width: 99vw;
+  }
+} 

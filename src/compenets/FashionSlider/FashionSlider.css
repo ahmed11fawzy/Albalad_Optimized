@@ -1,0 +1,265 @@
+/* FashionSlider.css */
+
+.fashion-slider {
+    width: 100%;
+    min-width: 600px;
+    height: 500px;
+    margin: 0 auto;
+    position: relative;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+.fashion-slider .swiper-wrapper {
+    height: 100%;
+}
+
+.fashion-slider .swiper-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    background: linear-gradient(135deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.1));
+    overflow: hidden;
+}
+
+.fashion-slider .swiper-slide::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(45deg,
+            rgba(0, 0, 0, 0.2) 0%,
+            transparent 50%,
+            rgba(255, 255, 255, 0.1) 100%);
+    z-index: 1;
+}
+
+.fashion-slider img {
+    width: 100%;
+    height: 100%;
+    object-fit: scale-down;
+    object-position: center;
+    transition: transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    filter: brightness(0.9) contrast(1.1);
+}
+
+.fashion-slider .swiper-slide:hover img {
+    transform: scale(1.08);
+    filter: brightness(1) contrast(1.2);
+}
+
+.fashion-slider-content {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 40px 25px 25px;
+    background: linear-gradient(transparent, rgba(0, 0, 0, 0.8));
+    z-index: 10;
+    transform: translateY(20px);
+    opacity: 0;
+    animation: slideUp 0.8s ease-out 0.5s forwards;
+}
+
+@keyframes slideUp {
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.fashion-slider-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: white;
+    text-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    margin-bottom: 10px;
+    letter-spacing: -0.02em;
+    line-height: 1.1;
+    font-family: 'Playfair Display', serif;
+}
+
+.fashion-slider-subtitle {
+    font-size: 1rem;
+    color: rgba(255, 255, 255, 0.9);
+    margin-bottom: 20px;
+    font-weight: 300;
+    letter-spacing: 0.5px;
+}
+
+.shop-now-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: white;
+    background: linear-gradient(135deg, #ff6b6b, #ee5a24);
+    padding: 12px 24px;
+    border-radius: 50px;
+    text-decoration: none;
+    transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    box-shadow: 0 8px 25px rgba(255, 107, 107, 0.3);
+    border: 2px solid transparent;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.shop-now-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 15px 35px rgba(255, 107, 107, 0.4);
+    background: linear-gradient(135deg, #ff5252, #d84315);
+    border-color: rgba(255, 255, 255, 0.2);
+}
+
+.shop-now-button::after {
+    content: '→';
+    transition: transform 0.3s ease;
+}
+
+.shop-now-button:hover::after {
+    transform: translateX(5px);
+}
+
+/* Navigation Buttons */
+.swiper-button-prev,
+.swiper-button-next {
+    color: white;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    margin-top: -30px;
+    transition: all 0.3s ease;
+}
+
+.swiper-button-prev:hover,
+.swiper-button-next:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: scale(1.1);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+}
+
+.swiper-button-prev:after,
+.swiper-button-next:after {
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.swiper-button-prev {
+    left: 30px;
+}
+
+.swiper-button-next {
+    right: 30px;
+}
+
+/* Pagination */
+.swiper-pagination {
+    bottom: 20px;
+}
+
+.swiper-pagination-bullet {
+    width: 12px;
+    height: 12px;
+    background: rgba(255, 255, 255, 0.5);
+    opacity: 1;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+}
+
+.swiper-pagination-bullet-active {
+    background: white;
+    transform: scale(1.2);
+    border-color: rgba(255, 255, 255, 0.3);
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .fashion-slider {
+        height: 500px;
+        border-radius: 15px;
+    }
+
+    .fashion-slider-content {
+        padding: 40px 10px 10px;
+    }
+
+    .fashion-slider-title {
+        font-size: 2.5rem;
+    }
+
+    .fashion-slider-subtitle {
+        font-size: 1rem;
+    }
+
+    .shop-now-button {
+        font-size: 1rem;
+        padding: 12px 25px;
+    }
+
+    .swiper-button-prev,
+    .swiper-button-next {
+        width: 50px;
+        height: 50px;
+        margin-top: -25px;
+    }
+
+    .swiper-button-prev {
+        left: 15px;
+    }
+
+    .swiper-button-next {
+        right: 15px;
+    }
+}
+
+@media (max-width: 670px) {
+    .fashion-slider {
+        min-width: 0;
+        height: 350px;
+        border-radius: 10px;
+    }
+
+    .fashion-slider-title {
+        font-size: 1.5rem;
+    }
+
+    .fashion-slider-subtitle {
+        font-size: 0.8rem;
+    }
+
+    .fashion-slider-content {
+        padding: 20px 10px 10px;
+    }
+
+    .shop-now-button {
+        font-size: 0.8rem;
+        padding: 10px 20px;
+    }
+
+    .swiper-button-prev {
+        display: none !important;
+    }
+
+    .swiper-button-next {
+        display: none !important;
+    }
+
+    .swiper-pagination {
+        bottom: 10px;
+    }
+
+    .swiper-pagination-bullet {
+        width: 8px;
+        height: 8px;
+    }
+}

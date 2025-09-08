@@ -1,0 +1,23 @@
+.logo-header-container {
+  padding: 32px 0 18px 0;
+  box-shadow: 0 2px 12px 0 rgba(0,0,0,0.06);
+  display: flex;
+  /* justify-content: center; */
+  align-items: center;
+}
+
+.logo-header-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo-header-img {
+  width: 95px;
+  height: 95px;
+  border-radius: 18px;
+  object-fit: cover;
+  /* box-shadow: 0 2px 8px 0 rgba(0,0,0,0.08);
+  border: 2px solid var(--primary-color, #b88c36);
+  background: #fff; */
+} 

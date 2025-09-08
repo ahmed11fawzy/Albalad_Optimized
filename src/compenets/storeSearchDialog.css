@@ -1,0 +1,136 @@
+.store-search-dialog-overlay {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0,0,0,0.08);
+  z-index: 20000;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+.store-search-dialog {
+  margin-top: 48px;
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 8px 32px #0002;
+  padding: 28px 28px 22px 28px;
+  min-width: 340px;
+  max-width: 96vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  animation: fadeInDialog 0.22s;
+}
+@keyframes fadeInDialog {
+  from { opacity: 0; transform: translateY(-24px) scale(0.98); }
+  to { opacity: 1; transform: translateY(0) scale(1); }
+}
+.store-search-form {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  gap: 0;
+}
+.store-search-input {
+  flex: 1;
+  border: 1.5px solid var(--primary-color, #b88c36);
+  border-radius: 22px 0 0 22px;
+  padding: 10px 16px;
+  font-size: 1.08em;
+  outline: none;
+  transition: border 0.18s;
+  background: #faf9f6;
+  color: #222;
+}
+.store-search-input:focus {
+  border-color: var(--primary-color2, #946914);
+}
+.store-search-icon-btn {
+  background: var(--primary-color, #b88c36);
+  color: #fff;
+  border: none;
+  border-radius: 0 22px 22px 0;
+  padding: 10px 18px 10px 14px;
+  font-size: 1.13em;
+  cursor: pointer;
+  transition: background 0.18s;
+  display: flex;
+  align-items: center;
+}
+.store-search-icon-btn:hover, .store-search-icon-btn:focus {
+  background: var(--primary-color2, #946914);
+}
+.store-search-dialog-close {
+  position: absolute;
+  top: 8px;
+  left: 12px;
+  background: none;
+  border: none;
+  font-size: 1.7em;
+  color: #b88c36;
+  cursor: pointer;
+  transition: color 0.18s;
+  padding: 0 4px;
+}
+.store-search-dialog-close:hover {
+  color: #946914;
+}
+@media (max-width: 500px) {
+  .store-search-dialog {
+    min-width: 90vw;
+    padding: 18px 6vw 16px 6vw;
+  }
+  .store-search-input {
+    font-size: 1em;
+    padding: 8px 10px;
+  }
+  .store-search-icon-btn {
+    font-size: 1em;
+    padding: 8px 12px 8px 10px;
+  }
+}
+.store-search-info-msg {
+  color: #946914;
+  font-size: 0.97em;
+  margin-top: 7px;
+  text-align: right;
+  font-weight: 500;
+}
+.store-search-error-msg {
+  color: #d32f2f;
+  font-size: 0.97em;
+  margin-top: 7px;
+  text-align: right;
+  font-weight: 600;
+}
+
+/* قائمة المتاجر المتشابهة */
+.store-search-multi-list {
+  width: 100%;
+  margin-top: 10px;
+}
+.store-search-multi-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  cursor: pointer;
+  padding: 8px 0;
+  border-bottom: 1px solid #eee;
+  transition: background 0.13s;
+}
+.store-search-multi-item:hover {
+  background: #faf9f6;
+}
+.store-search-multi-logo {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  object-fit: cover;
+  background: #fafafa;
+  border: 1px solid #eee;
+}
+.store-search-multi-name {
+  font-weight: 500;
+  font-size: 16px;
+  color: #222;
+} 

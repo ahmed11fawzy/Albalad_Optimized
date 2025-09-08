@@ -1,0 +1,194 @@
+:root{
+    --primary-color:#b88c36;
+    --second-color:#000000a8;
+    --third-color:white;
+    --transction-time:0.5s ease;
+    --primary-colo-low-opacity:#f0cb836b;
+    --border-color:#0000001c;
+    --transcition:0.5s ease;
+    --star-color:#FFD700;
+    --discount-perecent-bg:#ff0000a6;
+}
+
+.product-crad{
+    box-shadow: 1px 1px 1px 1px #5755550f;
+    border-radius: 10px; 
+    /* border:solid 1px gray;  */
+    cursor: pointer;
+    transition: var(--transcition);
+    overflow-x: hidden;
+}
+/* .product-crad:hover{
+    transform: scale(1.07);
+} */
+.product-crad:hover .product-image{
+    transform: scale(1.07);
+}
+.product-image{
+    border-radius: 10px; 
+    height: 200px;
+    width: 100%;
+    transform: scale(1);
+    position: relative;
+    transition: all .5s ease;
+}
+.product-image::before{
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background-color: #0000000f;
+}
+.product-image img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.product-crad .product-description{
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    line-height: 1.5;
+    max-height: 3em;
+    /* font-size: 13px; */
+    font-size: 14px;
+    font-weight: 400;
+    color: #191919;
+    line-height: normal;
+    word-break: break-all;
+    vertical-align: middle;
+}
+.product-stars-icon{
+    font-size: 10px;
+}
+.product-price{
+    font-weight: bold;
+    font-size: 20px;
+}
+.product-fac-price{
+    color: gray;
+}
+.product-is-welcome-offer{
+    background: var(--discount-perecent-bg);
+    font-size: 13px;
+    color: white;
+    font-weight: bold;
+    padding: 2px;
+    border-radius: 3px;
+}
+.product-is-add-discount{
+    color: var(--discount-perecent-bg);
+    font-size: 13px;
+   
+    overflow: hidden;
+    text-overflow: ellipsis;
+   width: 100%;
+}
+.product-discount{
+    color: var(--discount-perecent-bg);
+    margin: 3px;
+    font-size: 14px;
+    font-weight: bold;
+}
+.package-offer-btn{
+    width: 100%;
+    padding: 10px;
+    border: navajowhite;
+    border-radius: 10px;
+    font-weight: bold;
+    transition: var(--transcition);
+}
+.package-offer-btn:hover{
+    background: var(--primary-colo-low-opacity);
+}
+.free-shipping-box{
+    font-size: 12px;
+    font-weight: bold;
+}
+.choice-card{
+    background: var(--primary-colo-low-opacity);
+    padding: 3px;
+    font-family: emoji;
+    font-weight: bold;
+    font-size: 12px;
+}
+.more-loves-products-container{
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    gap: 1rem;
+}
+@media (min-width:501px) and ( max-width: 700px) {
+    .more-loves-products-container{
+      grid-template-columns: repeat(2, 1fr);
+    }
+    .product-image{
+        width: unset;
+        height: 180px;
+    }
+    .product-info-class{
+        font-size: 10px;
+    }
+    .product-is-welcome-offer{
+        font-size: 10px;
+    }
+  }
+  @media (max-width: 500px) {
+    .more-loves-products-container {
+      
+      grid-template-columns: repeat(2, 1fr);
+      gap: 0.5rem;
+    }
+  
+    /* Adjust the StyledCard to ensure it fits within the grid */
+    .MuiCard-root {
+      max-width: 100%;
+      width: 100%;
+      margin: 0 auto;
+      box-sizing: border-box;
+    }
+  
+    .product-image {
+      width: 100%;
+      height: 150px; /* Reduced height for better fit on small screens */
+      object-fit: cover;
+    }
+  
+    .product-info-class {
+      font-size: 10px;
+    }
+  
+    .product-is-welcome-offer {
+      font-size: 10px;
+    }
+  
+    /* Adjust card content padding and font sizes */
+    .MuiCardContent-root {
+      padding: 8px !important;
+    }
+  
+    .MuiTypography-h6 {
+      font-size: 0.9rem !important;
+    }
+  
+    .MuiTypography-body2 {
+      font-size: 0.75rem !important;
+    }
+  
+    .price-container .MuiTypography-root {
+      font-size: 0.85rem !important;
+    }
+  
+    .MuiChip-root {
+      font-size: 8px !important;
+      height: 18px !important;
+    }
+  
+    .action-buttons .MuiIconButton-root {
+      width: 32px !important;
+      height: 32px !important;
+    }
+  }

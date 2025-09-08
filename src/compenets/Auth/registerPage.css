@@ -1,0 +1,167 @@
+.register-page-root {
+  display: flex;
+  /* min-height: 100vh; */
+  background: #fff;
+}
+.register-form-section {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 48px 24px;
+  background: #fff;
+}
+.register-title {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #222;
+  margin-bottom: 32px;
+  text-align: center;
+}
+.register-account-types {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  width: 100%;
+  max-width: 420px;
+  margin-bottom: 32px;
+}
+.register-account-type {
+  background: #fafafa;
+  border: 2px solid #eee;
+  border-radius: 12px;
+  padding: 18px 18px 18px 12px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  transition: border 0.2s, box-shadow 0.2s;
+  box-shadow: 0 2px 8px #0001;
+  position: relative;
+}
+.register-account-type.selected {
+  border: 2px solid #ff6a00;
+  box-shadow: 0 4px 16px #ff6a0022;
+  background: #fff7f0;
+}
+.register-account-type input[type="radio"] {
+  accent-color: #ff6a00;
+  margin-left: 18px;
+  width: 20px;
+  height: 20px;
+}
+.register-type-content {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+.register-type-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 8px;
+  background: #ffe6e6;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.1rem;
+  margin-left: 8px;
+}
+.buyer-icon {
+  background: #ffe6e6 url('https://img.icons8.com/ios-filled/50/ff6a00/shopping-cart.png') center/60% no-repeat;
+}
+.supplier-icon {
+  background: #fff3cd url('https://img.icons8.com/ios-filled/50/ffb300/shop.png') center/60% no-repeat;
+}
+.register-type-title {
+  font-weight: bold;
+  font-size: 1.15em;
+  color: #222;
+  margin-bottom: 2px;
+}
+.register-type-desc {
+  color: #888;
+  font-size: 1em;
+}
+.register-continue-btn {
+  width: 100%;
+  max-width: 420px;
+  background: #ff6a00;
+  color: #fff;
+  border: none;
+  border-radius: 24px;
+  padding: 16px 0;
+  font-size: 1.18rem;
+  font-weight: bold;
+  margin: 32px 0 12px 0;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.register-continue-btn:hover {
+  background: #e55a00;
+}
+.register-login-link {
+  color: #888;
+  font-size: 1.08em;
+  text-align: center;
+  margin-top: 8px;
+}
+.register-login-link a {
+  color: #ff6a00;
+  text-decoration: underline;
+  font-weight: bold;
+}
+.register-image-section {
+  flex: 1;
+  /* background: linear-gradient(120deg, #fff7f0 60%, #ff6a00 100%); */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* min-height: 100vh; */
+  height:700px;
+}
+.register-image-bg {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height:555px;
+  width: 600px;
+}
+.register-illustration-img {
+  /* max-width: 420px; */
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+  box-shadow: 0 8px 32px #ff6a0033;
+}
+@media (max-width: 900px) {
+  .register-page-root {
+    flex-direction: column;
+  }
+  .register-image-section {
+    min-height: 220px;
+    padding: 24px 0;
+  }
+  .register-illustration-img {
+    max-width: 320px;
+  }
+}
+@media (max-width: 600px) {
+  .register-form-section {
+    padding: 18px 4vw;
+  }
+  .register-title {
+    font-size: 1.2rem;
+  }
+  .register-account-types {
+    max-width: 98vw;
+  }
+  .register-continue-btn {
+    max-width: 98vw;
+  }
+  .register-image-section {
+    padding: 8px 0;
+  }
+  .register-illustration-img {
+    max-width: 98vw;
+  }
+} 

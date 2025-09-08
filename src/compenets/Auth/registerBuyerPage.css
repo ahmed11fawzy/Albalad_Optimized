@@ -1,0 +1,299 @@
+:root{
+  --primary-color:#b88c36;
+  --second-color:#000000a8;
+  --third-color:white;
+  --transction-time:0.5s ease;
+  --primary-colo-low-opacity:#f0cb836b;
+  --border-color:#0000001c;
+  --transcition:0.5s ease;
+  --star-color:#FFD700;
+  --discount-perecent-bg:#ff0000a6;
+
+}
+/* Main root layout */
+.register-buyer-root {
+  display: flex;
+  min-height: 100vh;
+  background: #f7f8fa;
+  font-family: 'Tajawal', 'Cairo', Arial, sans-serif;
+  direction: rtl;
+}
+
+.register-buyer-form-section {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 48px 7vw 48px 0;
+  background: #fff;
+  box-shadow: 0 0 32px 0 rgba(0,0,0,0.04);
+  min-width: 400px;
+  max-width: 520px;
+}
+
+.register-buyer-title {
+  font-size: 2.1rem;
+  font-weight: 700;
+  color: #1a2340;
+  margin-bottom: 32px;
+  letter-spacing: 0.5px;
+}
+
+.register-buyer-form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.register-buyer-field {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 2px;
+}
+
+.register-buyer-field label {
+  font-size: 1.08rem;
+  color: #1a2340;
+  margin-bottom: 6px;
+  font-weight: 500;
+}
+
+.register-buyer-field .required {
+  color: #e53935;
+  margin-right: 2px;
+  font-size: 1.1em;
+}
+
+.register-buyer-field input {
+  padding: 10px 12px;
+  border: 1.5px solid #e0e3e7;
+  border-radius: 7px;
+  font-size: 1.05rem;
+  background: #f9fafb;
+  transition: border 0.2s;
+  outline: none;
+  color: #1a2340;
+}
+
+.register-buyer-field input:focus {
+  border-color: #1a73e8;
+  background: #fff;
+}
+
+.register-buyer-error {
+  color: #e53935;
+  font-size: 0.93em;
+  margin-top: 3px;
+  font-weight: 400;
+}
+
+.register-buyer-api-error {
+  color: #e53935;
+  background: #fff0f0;
+  border: 1px solid #ffd6d6;
+  border-radius: 6px;
+  padding: 8px 12px;
+  font-size: 1em;
+  margin-bottom: 8px;
+  text-align: right;
+}
+
+.register-buyer-success {
+  color: #388e3c;
+  background: #e8f5e9;
+  border: 1px solid #b2dfdb;
+  border-radius: 6px;
+  padding: 8px 12px;
+  font-size: 1em;
+  margin-bottom: 8px;
+  text-align: right;
+  direction: ltr;
+}
+
+.register-buyer-submit-btn {
+  width: 100%;
+  padding: 12px 0;
+  background: linear-gradient(90deg, var(--primary-color) 0%, #b07a1a 100%);
+  color:var(--third-color);
+  font-size: 1.15rem;
+  font-weight: 700;
+  border: none;
+  border-radius: 7px;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: background 0.2s, box-shadow 0.2s;
+  box-shadow: 0 2px 8px 0 rgba(26,115,232,0.07);
+  position: relative;
+  letter-spacing: 0.5px;
+}
+
+.register-buyer-submit-btn:disabled {
+  background: #b0c4e8;
+  cursor: not-allowed;
+}
+
+.register-buyer-loader {
+  display: inline-block;
+  width: 22px;
+  height: 22px;
+  border: 3px solid #fff;
+  border-radius: 50%;
+  border-top: 3px solid #1a73e8;
+  animation: register-buyer-spin 0.8s linear infinite;
+  vertical-align: middle;
+}
+
+@keyframes register-buyer-spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.register-buyer-login-link {
+  margin-top: 24px;
+  font-size: 1.05rem;
+  color: #1a2340;
+  text-align: right;
+}
+
+.register-buyer-login-link a {
+  color: #1a73e8;
+  text-decoration: underline;
+  font-weight: 500;
+  margin-right: 4px;
+}
+
+.register-buyer-image-section {
+  flex: 1.2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background:white;
+  min-width: 0;
+}
+
+.register-buyer-image-bg {
+  width: 90%;
+  max-width: 480px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.register-buyer-illustration-img {
+  width: 100%;
+    max-width: 550px;
+    height: 443px;
+    border-radius: 18px;
+    /* box-shadow: 0 4px 32px 0 rgba(26, 115, 232, 0.07); */
+}
+
+@media (max-width: 900px) {
+  .register-buyer-root {
+    flex-direction: column-reverse;
+    min-height: unset;
+  }
+  .register-buyer-form-section {
+    max-width: 100vw;
+    min-width: unset;
+    padding: 32px 6vw 32px 6vw;
+    box-shadow: none;
+  }
+  .register-buyer-image-section {
+    display: none;
+  }
+  .register-buyer-image-bg {
+    max-width: 320px;
+  }
+  .register-buyer-illustration-img {
+    max-width: 300px;
+  }
+}
+
+@media (max-width: 600px) {
+  .register-buyer-form-section {
+    padding: 18px 2vw 18px 2vw;
+  }
+  .register-buyer-title {
+    font-size: 1.3rem;
+    margin-bottom: 18px;
+  }
+  .register-buyer-form {
+    max-width: 100vw;
+    gap: 12px;
+  }
+  .register-buyer-image-section {
+    min-height: 120px;
+  }
+}
+
+.register-buyer-social-login {
+  display: flex;
+  gap: 18px;
+  margin: 28px 0 8px 0;
+}
+
+.register-buyer-social-btn-wide {
+  width: 100%;
+  max-width: 420px;
+  min-height: 52px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  border: 1.5px solid #222;
+  border-radius: 14px;
+  background: #fff;
+  font-size: 1.13rem;
+  font-weight: 500;
+  color: #222;
+  cursor: pointer;
+  transition: box-shadow 0.18s, border 0.18s, background 0.18s;
+  box-shadow: 0 2px 8px 0 rgba(206,156,59,0.04);
+  padding: 0 18px 0 0;
+  margin: 0 auto;
+  text-align: right;
+  position: relative;
+}
+
+.register-buyer-social-btn-wide:hover {
+  border-color: var(--primary-color);
+  box-shadow: 0 4px 16px 0 rgba(206,156,59,0.13);
+  background: #f7f3ea;
+}
+
+.register-buyer-social-btn-wide .social-icon {
+  width: 28px;
+  height: 28px;
+  margin-left: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.register-buyer-social-btn-wide .provider {
+  font-weight: bold;
+  margin: 0 4px;
+  font-size: 1.13rem;
+}
+
+.register-buyer-social-btn-wide.google {
+  color: #222;
+}
+
+.register-buyer-social-btn-wide.facebook {
+  color: #222;
+}
+
+@media (max-width: 600px) {
+  .register-buyer-social-btn-wide {
+    max-width: 100vw;
+    font-size: 1rem;
+    padding-right: 8px;
+  }
+  .register-buyer-social-btn-wide .social-icon {
+    margin-left: 8px;
+    width: 24px;
+    height: 24px;
+  }
+} 

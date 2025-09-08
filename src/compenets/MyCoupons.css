@@ -1,0 +1,209 @@
+.my-coupons-container {
+  padding: 24px 8px 32px 8px;
+  font-family: 'Tajawal', Arial, sans-serif;
+}
+
+.my-coupons-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 32px;
+}
+
+.my-coupons-header img {
+  width: 70px;
+  height: 70px;
+  object-fit: contain;
+  margin-bottom: 8px;
+}
+
+.my-coupons-header h2 {
+  font-size: 2rem;
+  color: #1a1a2e;
+  margin: 0;
+  letter-spacing: 1px;
+  font-weight: bold;
+}
+
+.my-coupons-loading,
+.my-coupons-error,
+.my-coupons-empty {
+  text-align: center;
+  color: #888;
+  font-size: 1.1rem;
+  margin-top: 40px;
+}
+
+.my-coupons-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.coupon-card {
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 2px 12px 0 rgba(30, 34, 90, 0.08);
+  padding: 22px 18px 16px 18px;
+  min-width: 220px;
+  max-width: 260px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: box-shadow 0.2s;
+  border: 2px dashed #e0e0e0;
+  position: relative;
+}
+
+.coupon-card:hover {
+  box-shadow: 0 4px 24px 0 rgba(30, 34, 90, 0.13);
+  border-color: #1a1a2e;
+}
+
+.coupon-code {
+  font-size: 1.7rem;
+  font-weight: bold;
+  color: #1a1a2e;
+  letter-spacing: 2px;
+  margin-bottom: 10px;
+  background: linear-gradient(90deg, #ffb347 0%, #ffcc33 100%);
+  padding: 6px 18px;
+  border-radius: 10px;
+  box-shadow: 0 1px 4px 0 rgba(255, 204, 51, 0.13);
+}
+
+.coupon-status {
+  font-size: 1.1rem;
+  margin-bottom: 8px;
+  padding: 2px 12px;
+  border-radius: 8px;
+  font-weight: 500;
+}
+.coupon-status.active {
+  background: #e6ffe6;
+  color: #1a8f1a;
+  border: 1px solid #1a8f1a;
+}
+.coupon-status.inactive {
+  background: #fff0f0;
+  color: #d32f2f;
+  border: 1px solid #d32f2f;
+}
+
+.coupon-date {
+  font-size: 0.95rem;
+  color: #888;
+  margin-top: 2px;
+}
+
+/* تصميم احترافي للكوبون */
+.pro-coupon-card {
+  position: relative;
+  padding-top: 32px;
+  border: none;
+  box-shadow: 0 4px 24px 0 rgba(30, 34, 90, 0.13);
+  border-radius: 22px;
+  background: linear-gradient(135deg, #fffbe6 0%, #fff 100%);
+  overflow: visible;
+  min-height: 170px;
+}
+.coupon-icon-box {
+  position: absolute;
+  top: -32px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: linear-gradient(135deg, #ffcc33 60%, #fffbe6 100%);
+  border-radius: 50%;
+  width: 64px;
+  height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 8px 0 rgba(255, 204, 51, 0.18);
+  border: 3px solid #fff;
+  z-index: 2;
+}
+.coupon-icon {
+  color: #b88c36;
+  font-size: 2.2rem;
+}
+.pro-coupon-code {
+  font-size: 2.1rem;
+  font-weight: bold;
+  color: #1a1a2e;
+  letter-spacing: 3px;
+  margin-bottom: 12px;
+  margin-top: 24px;
+  background: linear-gradient(90deg, #ffb347 0%, #ffcc33 100%);
+  padding: 8px 28px;
+  border-radius: 12px;
+  box-shadow: 0 1px 8px 0 rgba(255, 204, 51, 0.13);
+  border: 2px dashed #ffe082;
+}
+.pro-coupon-status {
+  font-size: 1.15rem;
+  margin-bottom: 0;
+  padding: 4px 18px;
+  border-radius: 10px;
+  font-weight: 600;
+  margin-top: 8px;
+  letter-spacing: 1px;
+  box-shadow: 0 1px 4px 0 rgba(30, 34, 90, 0.06);
+}
+.pro-coupon-status.active {
+  background: #fffde7;
+  color: #1a8f1a;
+  border: 1.5px solid #b6e7b6;
+}
+.pro-coupon-status.inactive {
+  background: #fff0f0;
+  color: #d32f2f;
+  border: 1.5px solid #ffd6d6;
+}
+
+@media (max-width: 600px) {
+  .pro-coupon-card {
+    min-height: 140px;
+    padding-top: 28px;
+  }
+  .coupon-icon-box {
+    width: 48px;
+    height: 48px;
+    top: -24px;
+  }
+  .coupon-icon {
+    font-size: 1.5rem;
+  }
+  .pro-coupon-code {
+    font-size: 1.2rem;
+    padding: 6px 14px;
+    margin-top: 16px;
+  }
+  .pro-coupon-status {
+    font-size: 1rem;
+    padding: 3px 10px;
+  }
+}
+
+@media (max-width: 600px) {
+  .my-coupons-list {
+    flex-direction: column;
+    gap: 16px;
+    align-items: center;
+  }
+  .coupon-card {
+    min-width: 0;
+    max-width: 100%;
+    width: 100%;
+    padding: 18px 10px 12px 10px;
+  }
+  .my-coupons-header img {
+    width: 54px;
+    height: 54px;
+  }
+  .my-coupons-header h2 {
+    font-size: 1.3rem;
+  }
+} 

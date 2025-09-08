@@ -1,0 +1,118 @@
+.store-description-section {
+  background: #f7f7f7;
+  border-radius: 8px;
+  padding: 18px 18px 18px 12px;
+  margin: 32px 0 0 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+}
+.store-description-actions {
+  display: flex;
+  gap: 18px;
+  margin-bottom: 8px;
+}
+.store-desc-btn {
+  border: 1.5px solid #222;
+  background: #fff;
+  color: #222;
+  font-weight: bold;
+  font-size: 1.08em;
+  border-radius: 3px;
+  padding: 8px 22px;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+  box-shadow: 0 1px 4px #0001;
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+.store-desc-btn:hover {
+  background: #f3e2b7;
+  color: #c89836;
+}
+.store-desc-btn.unfollow-btn {
+  background: #b88c36;
+  color: #fff;
+  border: 1.5px solid #b88c36;
+}
+.store-desc-btn.unfollow-btn:hover {
+  background: #a67c1a;
+  color: #fff;
+  border-color: #a67c1a;
+}
+.store-description-info {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 18px;
+}
+.store-desc-text {
+  text-align: right;
+}
+.store-desc-name {
+  font-weight: bold;
+  font-size: 1.18em;
+  margin-bottom: 4px;
+}
+.store-desc-meta {
+  color: #222;
+  font-size: 1em;
+  font-weight: 500;
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+.store-desc-rating {
+  color: #222;
+  font-weight: bold;
+}
+.store-desc-sep {
+  color: #888;
+  font-size: 1.1em;
+}
+.store-desc-followers {
+  color: #222;
+}
+.store-desc-img {
+  width: 48px;
+  height: 48px;
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px #0001;
+  background: #fff;
+}
+.loader-circle {
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  border: 2.5px solid #e0e0e0;
+  border-top: 2.5px solid #b88c36;
+  border-radius: 50%;
+  animation: spin 0.7s linear infinite;
+  vertical-align: middle;
+}
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+@media (max-width: 600px) {
+  .store-description-info {
+    align-items: center;
+    gap: 10px;
+  }
+  .store-desc-rating{
+    font-weight: normal;
+  }
+  .store-desc-img {
+    width: 38px;
+    height: 38px;
+  }
+  .store-description-section {
+    padding: 12px 6px;
+  }
+}
+.pointer {
+  cursor: pointer;
+} 
