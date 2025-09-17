@@ -1,7 +1,7 @@
 import { useEffect, useState, useCallback, useRef, useMemo } from "react";
 import { useNavigate } from "react-router-dom";
 import { useGetAllProductsQuery } from "../redux/Slices/productsApi";
-import ProductCard from "../compenets/styledComponents/productCard";
+import ProductCard from "./styledComponents/productCard";
 import Button from "./styledComponents/reusableButton";
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
@@ -89,9 +89,9 @@ export default function MoreLovesProductSection() {
 
   // Update products when new data arrives
   useEffect(() => {
-    if (data?.data?.products && !isFetching) {
-      const newProducts = data.data.products;
-      const totalPages = data.data.last_page;
+    if (data?.data && !isFetching) {
+      const newProducts = data.data;
+      const totalPages = data.last_page;
       const hasMore = currentPage < totalPages;
 
       console.log(
@@ -251,7 +251,7 @@ export default function MoreLovesProductSection() {
         {/* Initial loading state */}
         {isLoadingProducts && allProducts.length === 0 ? (
           <div className="more-loves-products-container">
-            {[...Array(5)].map((_, idx) => (
+            {[...Array(10)].map((_, idx) => (
               <SkeletonCard key={`skeleton-${idx}`} />
             ))}
           </div>
